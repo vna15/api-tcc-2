@@ -24,7 +24,7 @@ Tentar Deletar Usuário com E-mail Inexistente
     ${TOKEN}=   Obter token
     Criar Usuário
     Create Session    Users    ${base_url}
-    ${email}    Set Variable    test@example.com
+    ${email}    Set Variable    test2@example.com
     ${headers}=    Create Dictionary    Authorization=${TOKEN}    Content-Type=application/json
     ${data}    Create Dictionary    email=${email}
     ${response}    Delete Request    Users    /user/    json=${data}    headers=${headers}
