@@ -1,0 +1,27 @@
+name: Run Tests API
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run unit tests
+        run: python manage.py test users.tests.unitTests
+
+      - name: Run Robot Functional Tests
+        run: robot users/tests/functionalTests/
+
+      - name: Run contract tests
+        run: python manage.py users/tests/contractTests/
+
+      - name: Run performance test
+        run: python manage.py test users.tests.performanceTests
+
+      - name: Run Robot Security Tests
+        run: robot users/tests/securityTests/
