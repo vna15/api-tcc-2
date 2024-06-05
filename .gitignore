@@ -1,0 +1,8 @@
+venv/
+/log/
+/.idea/
+/users/tests/performanceTests/.pytest_cache/
+/users/tests/performanceTests/.benchmarks/
+/report.html
+/output.xml
+/log.html
