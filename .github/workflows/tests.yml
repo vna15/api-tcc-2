@@ -68,8 +68,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run unit tests
+      - name: Run unit model tests
         run: python manage.py test users.tests.unitTests.tests_models
+
+      - name: Run unit serializer tests
+        run: python manage.py test users.tests.unitTests.tests_serializer
+
+      - name: Run unit view tests
+        run: python manage.py test users.tests.unitTests.tests_views
 
   functional_tests:
     runs-on: ubuntu-latest
