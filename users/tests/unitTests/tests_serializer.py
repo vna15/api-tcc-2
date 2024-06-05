@@ -1,6 +1,6 @@
 from django.test import TestCase
-#from users.serializers import UsersSerializer
-#from users.models import Users
+from users.serializers import UsersSerializer
+from users.models import Users
 from rest_framework.parsers import JSONParser
 from io import BytesIO
 
