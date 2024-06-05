@@ -1,5 +1,5 @@
 from django.test import TestCase
-#from ...models import Users
+from ...models import Users
 from django.db.utils import IntegrityError
 from django.utils import timezone
 import time
