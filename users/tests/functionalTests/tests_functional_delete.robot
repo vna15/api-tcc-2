@@ -22,7 +22,6 @@ Teste de Deleção de Usuário
 Tentar Deletar Usuário com E-mail Inexistente
     [Documentation]    Verificar se o sistema trata adequadamente tentativas de exclusão de um usuário com um e-mail que não existe no sistema.
     ${TOKEN}=   Obter token
-    Criar Usuário
     Create Session    Users    ${base_url}
     ${email}    Set Variable    test2@example.com
     ${headers}=    Create Dictionary    Authorization=${TOKEN}    Content-Type=application/json
